@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!--TEXT DISPLAY-->
+<div class="text-display-box">
+    <p id="sample-text">
+       The quick brown fox jumps over the lazy dog.
+    </p>
+</div>
+
+<!--INPUT BOX-->
+<div class ="input-section">
+    <textarea
+        id="user-input"
+        placeholder="Start typing here..."
+        rows="4">
+
+    </textarea>
+</div>
+
+<!--STATS PANEL-->
+<div class="stats-panel">
+    <div class="stat">
+        <h3>⏱️ Time</h3>
+        <p id="timer">0s</p>
+    </div>
+    <div class="stat">
+        <h3>💨 WPM</h3>
+        <p id="wpm">0</p>
+    </div>
+     <div class="stat">
+        <h3>🎯 Accuracy</h3>
+        <p id="accuracy">0%</p>
+    </div>
+    <div class="stat">
+        <h3>❌ Errors</h3>
+        <p id="errors">0</p>
+    </div>
+</div>
+
+<!--RESET-->
+<div class="button-section">
+    <button id="reset-btn">Reset</button>
+</div>
+
+{% endblock %}
