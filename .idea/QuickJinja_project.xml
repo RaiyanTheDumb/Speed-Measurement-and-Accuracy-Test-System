@@ -3,7 +3,7 @@
   <component name="de.achimonline.quickjinja.settings.QuickJinjaProjectSettingsState">
     <option name="settings">
       <QuickJinjaProjectSettings>
-        <option name="templateFilePath" value="$PROJECT_DIR$/app/__init__.py" />
+        <option name="templateFilePath" value="$PROJECT_DIR$/run.py" />
       </QuickJinjaProjectSettings>
     </option>
   </component>
