@@ -17,7 +17,6 @@ function stopTimer() {
     timerRunning = false;
 }
 
-
 function resetTimer() {
     stopTimer();
     seconds = 0;
