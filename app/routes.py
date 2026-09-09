@@ -9,6 +9,7 @@ def index():
     sample_text = load_sample_text()
     return render_template('index.html', sample_text=sample_text)
 
+
 @main.route('/calculate', methods=['POST'])
 def calculate():
     data = request.get_json()

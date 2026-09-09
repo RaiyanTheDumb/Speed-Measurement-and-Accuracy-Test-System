@@ -3,7 +3,9 @@
 
 <!--TEXT DISPLAY-->
 <div class="text-display-box">
-    <p id="sample-text">{{ sample_text }}</p>
+     <div id="sample-text">
+        {% for char in sample_text %}<span class="char">{{ char }}</span>{% endfor %}
+    </div>
 </div>
 
 <!--INPUT BOX-->

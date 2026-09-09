@@ -102,3 +102,24 @@ header h1 {
 #reset-btn:hover {
     background-color: #b4befe;
 }
+
+/* Character Highlighting */
+.char {
+    display: inline;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    transition: color 0.1s;
+}
+
+.char.correct {
+    color: #a6e3a1;
+}
+
+.char.incorrect {
+    color: #f38ba8;
+    text-decoration: underline;
+}
+
+.char.current {
+    border-bottom: 2px solid #cba6f7;
+}
