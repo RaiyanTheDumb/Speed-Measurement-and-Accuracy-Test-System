@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="history-container">
+
+    <div class="history-header">
+        <h2>📊 Score History</h2>
+        <p class="high-score-badge">🏆 High Score: {{ high_score }} WPM</p>
+        <a href="/" class="back-btn">← Back to Test</a>
+    </div>
+
+    {% if scores %}
+    <table class="history-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>WPM</th>
+                <th>Accuracy</th>
+                <th>Errors</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for score in scores|reverse %}
+            <tr>
+                <td>{{ score.date }}</td>
+                <td>{{ score.time_taken }}s</td>
+                <td class="wpm-cell">{{ score.wpm }}</td>
+                <td>{{ score.accuracy }}%</td>
+                <td>{{ score.errors }}</td>
+                <td class="level-cell level-{{ score.level|lower }}">
+                    {{ score.level }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="no-scores">No scores yet — complete a test to see your history!</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

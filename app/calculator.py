@@ -47,3 +47,14 @@ def calculate_errors(sample_text, typed_text):
     errors += abs(len(typed_text) - len(sample_text))
 
     return errors
+def get_typing_level(wpm):
+    if wpm <= 30:
+        return 'Beginner'
+    elif wpm <= 50:
+        return 'Average'
+    elif wpm <= 75:
+        return 'Fluent'
+    elif wpm <= 100:
+        return 'Fast'
+    else:
+        return 'Expert'

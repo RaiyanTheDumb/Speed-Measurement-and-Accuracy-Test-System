@@ -103,6 +103,21 @@ header h1 {
     background-color: #b4befe;
 }
 
+.history-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: #313244;
+    color: #cdd6f4;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.history-btn:hover {
+    background-color: #45475a;
+}
+
 /* Character Highlighting */
 .char {
     display: inline;
@@ -251,4 +266,98 @@ header h1 {
 
 #modal-close-btn:hover {
     background-color: #eba0ac;
+}
+
+/* History Page */
+.history-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.history-header h2 {
+    font-size: 1.5rem;
+    color: #cba6f7;
+}
+
+.high-score-badge {
+    background-color: #313244;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #a6e3a1;
+    font-weight: bold;
+}
+
+.back-btn {
+    color: #cba6f7;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #cba6f7;
+    border-radius: 8px;
+}
+
+.back-btn:hover {
+    background-color: #cba6f7;
+    color: #1e1e2e;
+}
+
+/* History Table */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #313244;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.history-table th {
+    background-color: #1e1e2e;
+    color: #a6adc8;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.history-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #1e1e2e;
+    color: #cdd6f4;
+    font-size: 0.95rem;
+}
+
+.history-table tr:last-child td {
+    border-bottom: none;
+}
+
+.history-table tr:hover td {
+    background-color: #1e1e2e;
+}
+
+.wpm-cell {
+    font-weight: bold;
+    color: #cba6f7 !important;
+}
+
+/* Level Colors */
+.level-beginner { color: #f38ba8 !important; }
+.level-average  { color: #fab387 !important; }
+.level-fluent   { color: #cba6f7 !important; }
+.level-fast     { color: #89b4fa !important; }
+.level-expert   { color: #a6e3a1 !important; }
+
+.no-scores {
+    text-align: center;
+    color: #a6adc8;
+    padding: 40px;
+    background-color: #313244;
+    border-radius: 10px;
 }

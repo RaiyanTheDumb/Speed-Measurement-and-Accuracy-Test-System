@@ -1,8 +1,8 @@
 // Get typing level based on WPM
 function getTypingLevel(wpm) {
     if (wpm <= 30) return { level: '🐢 Beginner', color: '#f38ba8' };
-    else if (wpm <= 50) return { level: '📝 Average', color: '#fab387' };
-    else if (wpm <= 75) return { level: '✅ Fluent', color: '#cba6f7' };
+    else if (wpm <= 50) return { level: '⌨️ Average', color: '#fab387' };
+    else if (wpm <= 75) return { level: '🌊 Fluent', color: '#cba6f7' };
     else if (wpm <= 100) return { level: '⚡ Fast', color: '#89b4fa' };
     else return { level: '🏆 Expert', color: '#a6e3a1' };
 }
