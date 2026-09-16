@@ -41,4 +41,38 @@
     <button id="reset-btn">Reset</button>
 </div>
 
+<!-- Performance Dashboard Modal -->
+<div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal-box">
+        <h2>🏁 Your Results</h2>
+        <div class="modal-stats">
+            <div class="modal-stat">
+                <h3>⏱️ Time Taken</h3>
+                <p id="modal-time">0s</p>
+            </div>
+            <div class="modal-stat">
+                <h3>💨 WPM</h3>
+                <p id="modal-wpm">0</p>
+            </div>
+            <div class="modal-stat">
+                <h3>🎯 Accuracy</h3>
+                <p id="modal-accuracy">0%</p>
+            </div>
+            <div class="modal-stat">
+                <h3>❌ Errors</h3>
+                <p id="modal-errors">0</p>
+            </div>
+        </div>
+        <div class="modal-level-box">
+            <h3>🏅 Typing Level</h3>
+            <p id="modal-level">—</p>
+        </div>
+        <div class="modal-buttons">
+            <button id="modal-retry-btn">🔄 Try Again</button>
+            <button id="modal-close-btn">✖ Close</button>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}

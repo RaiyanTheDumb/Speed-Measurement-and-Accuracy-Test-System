@@ -62,5 +62,6 @@ function sendResults(typedText, sampleText) {
         document.getElementById('wpm').textContent = data.wpm;
         document.getElementById('accuracy').textContent = data.accuracy + '%';
         document.getElementById('errors').textContent = data.errors;
+        showDashboard(data.wpm, data.accuracy, data.errors, seconds);
     });
 }
