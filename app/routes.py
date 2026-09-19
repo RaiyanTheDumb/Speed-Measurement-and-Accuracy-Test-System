@@ -1,12 +1,30 @@
+"""
+routes.py
+Defines all URL routes for the Flask application.
+Handles page rendering and API endpoints.
+"""
 from flask import Blueprint, render_template, request, jsonify
 from .text_loader import load_sample_text
-from .calculator import (calculate_wpm, calculate_accuracy, calculate_errors, get_typing_level)
-from .score_logger import (save_score_csv, save_score_json, get_high_score, get_all_scores)
+from .calculator import (calculate_wpm, calculate_accuracy,
+                         calculate_errors, get_typing_level)
+from .score_logger import (save_score_csv, save_score_json,
+                           get_high_score, get_all_scores)
 
 main = Blueprint('main', __name__)
 
+
 @main.route('/')
 def index():
+    """
+    Render the main typing test page.
+
+    Loads a random sample text and the current
+    high score to display on the homepage.
+
+    Returns:
+        rendered HTML: index.html with sample_text
+                       and high_score context variables.
+    """
     sample_text = load_sample_text()
     high_score = get_high_score()
     return render_template('index.html',
@@ -16,6 +34,15 @@ def index():
 
 @main.route('/calculate', methods=['POST'])
 def calculate():
+    """
+    API endpoint to calculate typing test results.
+
+    Receives typed text, sample text and time taken
+    via JSON POST request. Calculates and saves results.
+
+    Returns:
+        JSON: wpm, accuracy, errors, level
+    """
     data = request.get_json()
 
     typed_text = data.get('typed_text', '')
@@ -37,8 +64,19 @@ def calculate():
         'level': level
     })
 
+
 @main.route('/history')
 def history():
+    """
+    Render the score history page.
+
+    Retrieves all saved scores and the high score
+    from local storage to display in a table.
+
+    Returns:
+        rendered HTML: history.html with scores
+                       and high_score context variables.
+    """
     scores = get_all_scores()
     high_score = get_high_score()
     return render_template('history.html',
