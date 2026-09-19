@@ -63,6 +63,27 @@ window.addEventListener('load', function() {
         event.preventDefault();
     });
 
+    // Block right-click to prevent paste
+    userInput.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    });
+
+    // Block drag and drop into input
+    userInput.addEventListener('drop', function(event) {
+        event.preventDefault();
+    });
+
+    // Block key holding (only allow single keypresses)
+    userInput.addEventListener('keydown', function(event) {
+        if (event.repeat) {
+         event.preventDefault();
+         return;
+        }
+        if (!typingStarted && !resultsSent) {
+         typingStarted = true;
+         startTimer();
+        }
+});
 });
 
 // Update the on-page stats live, on every keystroke

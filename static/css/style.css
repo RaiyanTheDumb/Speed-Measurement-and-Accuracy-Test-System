@@ -361,3 +361,45 @@ header h1 {
     background-color: #313244;
     border-radius: 10px;
 }
+
+/* Responsive layout for window resizing */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .text-display-box {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .stats-panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat p {
+        font-size: 1.4rem;
+    }
+
+    .modal-box {
+        padding: 25px 15px;
+    }
+
+    .modal-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-stat p {
+        font-size: 1.4rem;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+}
