@@ -111,13 +111,13 @@ http://127.0.0.1:5000
 ---
 
 ## Typing Levels
-| WPM | Level |
-|---|---|
+| WPM | Level       |
+|---|-------------|
 | 0 – 30 | 🐢 Beginner |
-| 31 – 50 | 📝 Average |
-| 51 – 75 | ✅ Fluent |
-| 76 – 100 | ⚡ Fast |
-| 100+ | 🏆 Expert |
+| 31 – 50 | ⌨️ Average  |
+| 51 – 75 | 🌊 Fluent   |
+| 76 – 100 | ⚡ Fast      |
+| 100+ | 🏆 Expert   |
 
 ---
 
